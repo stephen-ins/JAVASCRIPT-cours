@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice procédural | Question 4 : Money</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="caisse__enregistreuse">CAISSE</h1>
+
+      <div class="content">
+        <div class="caisse">
+          <label for="prix">MONTANT TOTAL</label>
+          <input
+            id="prix"
+            placeholder="Inscrire un montant"
+            min="0"
+            type="number"
+          />
+          <label for="monnaie">MONTANT DONNE PAR LE CLIENT</label>
+          <input
+            id="monnaie"
+            placeholder="Inscrire un montant"
+            min="0"
+            type="number"
+          />
+        </div>
+      </div>
+      <button class="button__submit" id="buttonSubmit">ENREGISTRER</button>
+      <label class="rendre" for="rendre">A RENDRE</label>
+
+      <div class="resultat" id="resultat"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

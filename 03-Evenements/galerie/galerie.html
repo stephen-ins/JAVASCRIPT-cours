@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../galerie/galerie.css" />
+    <title>La galerie et autres exos</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block background__lightblue"></div>
+
+      <h2 class="title__h2">Exercice numéro 1 : La galerie</h2>
+
+      <div class="container1">
+        <section class="exercice1">
+          <div class="gallery">
+            <div class="large__photo">
+              <img
+                id="largeImage"
+                src="/assets/images/photo11.jpg"
+                alt="Thor à tort !"
+                onmouseover="showCaption()"
+                onmouseout="hideCaption()"
+              />
+              <div id="caption" class="caption">Thor à tort !</div>
+            </div>
+            <div class="thumbnail">
+              <img
+                src="/assets/images/photo1.jpg"
+                alt="Hulk et ses amis"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo2.avif"
+                alt="Tony et ses amis"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo3.jpg"
+                alt="Hulk et ses amis version vintage"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo4.jpg"
+                alt="Belles et rebelles"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo5.jpg"
+                alt="Hulk : 'Est-ce que je peux chier tranquille !!!'"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo6.jpg"
+                alt="Superman versus Batman"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo7.jpg"
+                alt="La bataille des Avengers"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo8.jpg"
+                alt="La créature noire !"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo9.webp"
+                alt="The red Marvel group"
+                onclick="showLargePhoto(this)"
+              />
+              <img
+                src="/assets/images/photo10.jpg"
+                alt="Un éclair de vengeance"
+                onclick="showLargePhoto(this)"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="exercice2">
+        <h2 class="title__h2">Exercice numéro 2 : Copieur</h2>
+        <div class="container2">
+          <div>
+            <label for="inputText">TEXTE SAISI :</label>
+            <input
+              placeholder="Saisir votre champ"
+              type="text"
+              id="inputText"
+              oninput="copyText()"
+            />
+          </div>
+          <div>
+            <label for="outputText">TEXTE RECOPIE :</label>
+            <input
+              placeholder="Saisir votre champ"
+              type="text"
+              id="outputText"
+              readonly
+            />
+          </div>
+        </div>
+      </section>
+      <section class="exercice3">
+        <h2 class="title__h2">Exercice numéro 3 : Tableau de calcul</h2>
+        <div class="container3">
+          <div>
+            <label for="inputNumber"></label>
+            <input
+              placeholder="Saisir votre chiffre"
+              type="number"
+              id="inputNumber"
+              oninput="calculate()"
+            />
+          </div>
+          <div>
+            <p class="result__exo3">
+              Valeur au carré : <span id="carreValue"></span>
+            </p>
+            <p class="result__exo3">
+              Valeur au cube : <span id="cubeValue"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="exercice4">
+        <h2 class="title__h2">Exercice numéro 4 : Déplacement au clic</h2>
+        <div class="container4">
+          <button id="blueButton" class="blue__button" onclick="moveCarre()">
+            BOUGE PETIT <br />
+            CARRE BLEU
+          </button>
+          <div id="blueCarre" class="blue__carre"></div>
+        </div>
+      </section>
+      <section class="exercice5">
+        <h2 class="title__h2">Exercice numéro 5 : Déplacement au scroll</h2>
+        <div class="container5" id="container5">
+          <div class="content">
+            <div id="greenCarre" class="green__carre"></div>
+          </div>
+        </div>
+      </section>
+      <section class="exercice6">
+        <h2 class="title__h2">Exercice numéro 6 : Le menu déroulant</h2>
+        <div class="container6" id="container6">
+          <div class="dropdown">
+            <button class="menu__dropdown" id="menuDropdown" onclick="">
+              SELECTIONNER VOTRE COMMENTAIRE
+            </button>
+            <a class="dropdown__item" href="#">INSUFFISANT</a>
+            <a class="dropdown__item" href="#">PASSABLE</a>
+            <a class="dropdown__item" href="#">SATISFAISANT</a>
+            <a class="dropdown__item" href="#">BIEN</a>
+            <a class="dropdown__item" href="#">TRES BIEN</a>
+            <a class="dropdown__item" href="#">EXCELLENT</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="galerie.js"></script>
+  </body>
+</html>

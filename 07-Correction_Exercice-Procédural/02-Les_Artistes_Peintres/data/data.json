@@ -1,0 +1,60 @@
+{
+  "Caillebotte": {
+    "tableaux": [
+      "Autoportrait_Caillebotte.png",
+      "Jour_de_pluie_à_Paris.png",
+      "Peintres_en_batiment.png",
+      "Périssoires_sur_l’Yerres.png",
+      "Raboteurs_de_parquet.png"
+    ]
+  },
+  "Kandinsky": {
+    "tableaux": [
+      "Composition-1939.png",
+      "Composition-VI-1913.png",
+      "Jaune_rouge_bleu.png",
+      "Moscou-1916.png",
+      "Noir-et-violet-1923.png",
+      "tableau-en-bleu-1925-.png"
+    ]
+  },
+  "Monet": {
+    "tableaux": [
+      "Impression_soleil_levant-1872.png",
+      "La_Promenade.png",
+      "Le_déjeuner-1873.png",
+      "Les_Coquelicots.png",
+      "Madame_Monet_et_Enfant-1875.png",
+      "Nymphéas-1916.png"
+    ]
+  },
+  "Picasso": {
+    "tableaux": [
+      "Autoportrait_Picasso.png",
+      "Demoiselles_Avignon.png",
+      "Femme_qui_pleure.png",
+      "guernica.png",
+      "Le_Peintre_et_son_Modele.png",
+      "Marie_Therese.png"
+        
+      ]
+    },
+    "Van Gogh": {
+      "tableaux": [
+        "Campagne_Montagneuse-1889.jpg",
+        "La_Chambre_de_van_gogh-1889-.png",
+        "La_nuit_étoilée-1889.png",
+        "La_Sieste.png",
+        "Les_Iris-1889.png",
+        "Terrasse_café.png"
+      ]
+    },
+    "Vermeer": {
+      "tableaux": [
+        "fille_a_la-perle.png",
+        "La_Laitière.png",
+        "La_Liseuse_à_la_fenêtre.png"
+      ]
+    }
+  }
+  

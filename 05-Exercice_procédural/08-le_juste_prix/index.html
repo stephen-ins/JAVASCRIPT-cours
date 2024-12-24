@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice procédural | Question 8 : Le juste prix</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Trouve le :</h1>
+      <img
+        src="../assets/images/logo/le_juste_prix.jpg"
+        alt="logo le juste prix"
+      />
+      <div class="content">
+        <div class="image">
+          <img src="" alt="image" class="image__object" />
+        </div>
+        <h2 class="name__object">name__object</h2>
+        <label class="prix" for="prix"
+          >Quelle est votre estimation en euros ?</label
+        >
+        <input
+          placeholder="Saisir un nombre entre 0 et 100"
+          type="number"
+          id="inputPrice"
+          class="input__price"
+        />
+        <button id="buttonGame" class="button">VALIDER</button>
+        <div id="tentativeMessage" class="tentative__message"></div>
+        <div id="resultatMessage" class="resultat__message"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

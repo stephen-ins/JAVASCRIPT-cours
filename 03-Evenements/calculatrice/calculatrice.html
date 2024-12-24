@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculatrice.css" />
+    <title>Calculatrice Javascript</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title__h1">Calculatrice Javascript</h1>
+      <div class="open__close">
+        <button id="openButton" class="link__appear">OUVRIR</button>
+        <button id="closeButton" class="link__disappear">FERMER</button>
+      </div>
+      <div class="block calculate__block">
+        <form action="" onsubmit="calculate(event)">
+          <input
+            type="text"
+            id="number1"
+            placeholder="00.00"
+            class="input__text input__text1 hover__area"
+          />
+
+          <div class="hidden__message1" id="hiddenMessage1">
+            Veuillez saisir un chiffre
+          </div>
+
+          <div class="calcul__item">
+            <label class="label__method" for="label__method"
+              >Votre méthode de calcul</label
+            >
+          </div>
+
+          <select
+            class="calcul__select hover__area"
+            name="calcul__select"
+            id="calcul__select"
+          >
+            <option value="">Selectionner</option>
+            <option value="+">ADDITIONNER +</option>
+            <option value="-">SOUSTRAIRE -</option>
+            <option value="*">MULTIPLIER *</option>
+            <option value="/">DIVISER /</option>
+          </select>
+
+          <div class="hidden__message3" id="hiddenMessage3">
+            Sélectionnez un opérateur
+          </div>
+
+          <input
+            type="text"
+            id="number2"
+            placeholder="00.00"
+            class="input__text hover__area"
+          />
+
+          <div class="hidden__message2" id="hiddenMessage2">
+            Veuillez saisir un chiffre
+          </div>
+
+          <div class="information__fail" id="information__fail"></div>
+
+          <button type="submit" class="button__calcul">Calculer</button>
+          <p class="resultat">Votre résultat</p>
+          <div class="result" id="result"></div>
+        </form>
+      </div>
+    </div>
+    <script src="calculatrice.js"></script>
+  </body>
+</html>

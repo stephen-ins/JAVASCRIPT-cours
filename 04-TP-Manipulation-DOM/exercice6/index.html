@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Exercice-6 | Menu déroulant</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbarItem">
+        <div class="menuItem" id="menuItem">
+          <img
+            src="../../assets/logo/regjeringen_opengraph_image200x200.webp"
+            alt="logo"
+          />
+          <ul class="listItem">
+            <li class="item">
+              <a class="item1" href="#">Home</a>
+            </li>
+            <li class="item">
+              <a class="item2" href="#">A propos</a>
+            </li>
+            <li class="item">
+              <a class="item3" href="#">Boutique</a>
+            </li>
+            <li class="item">
+              <a class="item4" href="#">Panier</a>
+            </li>
+            <li class="item">
+              <a class="item5" href="#">Contact</a>
+            </li>
+          </ul>
+          <button class="buttonDropdown2" onclick="toggleDropdown2(this)">
+            <i class="icone fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="dropdown">
+        <button class="buttonDropdown" onclick="toggleDropdown(this)">
+          <h1 class="title__dropdown">Menu déroulant</h1>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown__list">
+          <ul class="dropdown__menu">
+            <li class="menu__item">
+              <a href="#" class="dropdown__item">Lien 1</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="dropdown__item">Lien 2</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="dropdown__item">Lien 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

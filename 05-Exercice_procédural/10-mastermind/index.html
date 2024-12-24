@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jouez au Mastermind en ligne gratuitement ! Testez vos compétences en logique et stratégie en devinant le code secret. Défiez vos amis ou entraînez-vous seul."
+    />
+    <meta
+      name="keywords"
+      content="Mastermind, jeu de logique, jeu de stratégie, deviner le code, jeu en ligne, Mastermind gratuit, casse-tête, jeu pour enfants et adultes, jeux éducatifs, réflexion"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice procédural | Question 10 : Le Mastermind</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title"></h1>
+      <img
+        src="assets/images/logo/mastermind_logo.jpg"
+        alt="logo du jeu mastermind "
+      />
+      <div class="content">
+        <section class="barre__blanche"></section>
+        <p class="title__h2">
+          Le but du jeu du Mastermind est pour l'un des joueurs d'élaborer une
+          combinaison difficilement déchiffrable et pour son adversaire, de
+          deviner en un minimum de coup cette combinaison cachée. En l'occurence
+          ici, l'ordinateur s'occupera aléatoirement de la combinaison : 4 pions
+          à deviner, 12 tentatives pour vous, joueur.
+        </p>
+        <section class="barre__blanche"></section>
+
+        <div class="game__btn" id="gameButton">
+          <button class="button" type="button">
+            <img
+              src="assets/images/images_mastermind/colors_balls.png"
+              alt="game__button"
+              class="game__button"
+            />
+          </button>
+        </div>
+        <div class="game__table" id="gameTable">
+          <div class="pion__position" id="pionPostion">
+            <table class="table__indice">
+              <tr class="tr__12">
+                <td class="trIndice12 td__1"></td>
+                <td class="trIndice12 td__2"></td>
+                <td class="trIndice12 td__3"></td>
+                <td class="trIndice12 td__4"></td>
+              </tr>
+              <tr class="tr__11">
+                <td class="trIndice11 td__1"></td>
+                <td class="trIndice11 td__2"></td>
+                <td class="trIndice11 td__3"></td>
+                <td class="trIndice11 td__4"></td>
+              </tr>
+              <tr class="tr__10">
+                <td class="trIndice10 td__1"></td>
+                <td class="trIndice10 td__2"></td>
+                <td class="trIndice10 td__3"></td>
+                <td class="trIndice10 td__4"></td>
+              </tr>
+              <tr class="tr__9">
+                <td class="trIndice9 td__1"></td>
+                <td class="trIndice9 td__2"></td>
+                <td class="trIndice9 td__3"></td>
+                <td class="trIndice9 td__4"></td>
+              </tr>
+              <tr class="tr__8">
+                <td class="trIndice8 td__1"></td>
+                <td class="trIndice8 td__2"></td>
+                <td class="trIndice8 td__3"></td>
+                <td class="trIndice8 td__4"></td>
+              </tr>
+              <tr class="tr__7">
+                <td class="trIndice7 td__1"></td>
+                <td class="trIndice7 td__2"></td>
+                <td class="trIndice7 td__3"></td>
+                <td class="trIndice7 td__4"></td>
+              </tr>
+              <tr class="tr__6">
+                <td class="trIndice6 td__1"></td>
+                <td class="trIndice6 td__2"></td>
+                <td class="trIndice6 td__3"></td>
+                <td class="trIndice6 td__4"></td>
+              </tr>
+              <tr class="tr__5">
+                <td class="trIndice5 td__1"></td>
+                <td class="trIndice5 td__2"></td>
+                <td class="trIndice5 td__3"></td>
+                <td class="trIndice5 td__4"></td>
+              </tr>
+              <tr class="tr__4">
+                <td class="trIndice4 td__1"></td>
+                <td class="trIndice4 td__2"></td>
+                <td class="trIndice4 td__3"></td>
+                <td class="trIndice4 td__4"></td>
+              </tr>
+              <tr class="tr__3">
+                <td class="trIndice3 td__1"></td>
+                <td class="trIndice3 td__2"></td>
+                <td class="trIndice3 td__3"></td>
+                <td class="trIndice3 td__4"></td>
+              </tr>
+              <tr class="tr__2">
+                <td class="trIndice2 td__1"></td>
+                <td class="trIndice2 td__2"></td>
+                <td class="trIndice2 td__3"></td>
+                <td class="trIndice2 td__4"></td>
+              </tr>
+              <tr class="tr__1">
+                <td class="trIndice1 td__1"></td>
+                <td class="trIndice1 td__2"></td>
+                <td class="trIndice1 td__3"></td>
+                <td class="trIndice1 td__4"></td>
+              </tr>
+            </table>
+          </div>
+          <section class="game__plateau" id="gamePlateau">
+            <table class="table__game">
+              <tr class="tr__12">
+                <td class="tr12 td__1"></td>
+                <td class="tr12 td__2"></td>
+                <td class="tr12 td__3"></td>
+                <td class="tr12 td__4"></td>
+              </tr>
+              <tr class="tr__11">
+                <td class="tr11 td__1"></td>
+                <td class="tr11 td__2"></td>
+                <td class="tr11 td__3"></td>
+                <td class="tr11 td__4"></td>
+              </tr>
+              <tr class="tr__10">
+                <td class="tr10 td__1"></td>
+                <td class="tr10 td__2"></td>
+                <td class="tr10 td__3"></td>
+                <td class="tr10 td__4"></td>
+              </tr>
+              <tr class="tr__9">
+                <td class="tr9 td__1"></td>
+                <td class="tr9 td__2"></td>
+                <td class="tr9 td__3"></td>
+                <td class="tr9 td__4"></td>
+              </tr>
+              <tr class="tr__8">
+                <td class="tr8 td__1"></td>
+                <td class="tr8 td__2"></td>
+                <td class="tr8 td__3"></td>
+                <td class="tr8 td__4"></td>
+              </tr>
+              <tr class="tr__7">
+                <td class="tr7 td__1"></td>
+                <td class="tr7 td__2"></td>
+                <td class="tr7 td__3"></td>
+                <td class="tr7 td__4"></td>
+              </tr>
+              <tr class="tr__6">
+                <td class="tr6 td__1"></td>
+                <td class="tr6 td__2"></td>
+                <td class="tr6 td__3"></td>
+                <td class="tr6 td__4"></td>
+              </tr>
+              <tr class="tr__5">
+                <td class="tr5 td__1"></td>
+                <td class="tr5 td__2"></td>
+                <td class="tr5 td__3"></td>
+                <td class="tr5 td__4"></td>
+              </tr>
+              <tr class="tr__4">
+                <td class="tr4 td__1"></td>
+                <td class="tr4 td__2"></td>
+                <td class="tr4 td__3"></td>
+                <td class="tr4 td__4"></td>
+              </tr>
+              <tr class="tr__3">
+                <td class="tr3 td__1"></td>
+                <td class="tr3 td__2"></td>
+                <td class="tr3 td__3"></td>
+                <td class="tr3 td__4"></td>
+              </tr>
+              <tr class="tr__2">
+                <td class="tr2 td__1"></td>
+                <td class="tr2 td__2"></td>
+                <td class="tr2 td__3"></td>
+                <td class="tr2 td__4"></td>
+              </tr>
+              <tr class="tr__1">
+                <td class="tr1 td__1"></td>
+                <td class="tr1 td__2"></td>
+                <td class="tr1 td__3"></td>
+                <td class="tr1 td__4"></td>
+              </tr>
+            </table>
+          </section>
+          <div class="content__button">
+            <button class="button__submit reload__game">REJOUER</button>
+            <div class="pion__select" id="pionSelect">
+              <section class="pion__color">
+                <div class="color blue"></div>
+                <div class="color red"></div>
+                <div class="color yellow"></div>
+                <div class="color green"></div>
+                <div class="color white"></div>
+                <div class="color black"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="message" id="message"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

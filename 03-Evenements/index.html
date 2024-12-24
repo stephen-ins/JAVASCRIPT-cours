@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JAVASCRIPT | 03-Evenements</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block background__lightblue"></div>
+
+      <hr class="separation" />
+      <br />
+      <br />
+
+      <form action="">
+        <input
+          type="text"
+          class="input__text"
+          placeholder="rechercher..."
+          oninput="formSearch(this)"
+        />
+        <div class="result__search"></div>
+      </form>
+      <br />
+      <br />
+      <hr class="separation" />
+      <br />
+      <br />
+      <form action="" class="form">
+        <div class="message__validation"></div>
+        <div class="form__item">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" class="input__text" />
+          <p class="error__prenom"></p>
+        </div>
+        <div class="form__item">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" class="input__text" />
+          <p class="error__nom"></p>
+        </div>
+        <button type="submit" class="button__submit">Valider</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

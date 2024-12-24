@@ -1,0 +1,26 @@
+@import url(../../01-Entrainement/css/reset.css);
+
+html,
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: 50px auto;
+  border: 2px solid #000;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.square {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  border-radius: 1rem;
+  transition: all 0.5s;
+  -webkit-box-shadow: 3px 7px 25px -3px rgba(0, 0, 0, 0.55);
+  box-shadow: 3px 7px 25px -3px rgba(0, 0, 0, 0.55);
+  border: #49934564 solid 4px;
+}

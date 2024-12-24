@@ -1,0 +1,36 @@
+@import url(../../01-Entrainement/css/reset.css);
+
+html,
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input__text {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid grey;
+}
+

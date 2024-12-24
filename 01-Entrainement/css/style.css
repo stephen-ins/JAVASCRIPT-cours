@@ -1,0 +1,40 @@
+@import url(reset.css);
+
+html,
+body {
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 1rem;
+}
+
+.title__h1 {
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.title__h2 {
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: #2e54a6;
+  color: #fff;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.jaune {
+  color: yellow;
+}
+.vert {
+  color: green;
+}
+.rouge {
+  color: red;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 1rem;
+}

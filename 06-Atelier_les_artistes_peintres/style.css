@@ -1,0 +1,836 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: "roboto";
+  src: url(../assets/atelier_les-artistes-peintres/font/Roboto/woff/roboto-regular-webfont.woff2)
+      format("woff2"),
+    url(../assets/atelier_les-artistes-peintres/font/Roboto/woff/roboto-regular-webfont.woff)
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inspiration";
+  src: url(../assets/atelier_les-artistes-peintres/font/Inspiration/woff/inspiration-regular-webfont.woff2)
+      format("woff2"),
+    url(../assets/atelier_les-artistes-peintres/font/Inspiration/woff/inspiration-regular-webfont.woff)
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: "roboto";
+  background-color: rgb(86, 20, 5);
+  margin: 0 4rem;
+}
+
+.header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.icone__burger {
+  color: antiquewhite;
+  padding: 1rem 0;
+  width: 100%;
+  height: 40px;
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+}
+.icone__burger:hover {
+  color: rgb(207, 82, 9);
+  background-color: rgba(126, 36, 36, 0.534);
+  border-left: 1px solid #cd620b;
+  border-right: 1px solid #cd620b;
+  z-index: 1000;
+}
+
+.title__h1 {
+  font-size: 4rem;
+  padding: 2rem 0.75rem;
+  font-family: "inspiration";
+  color: antiquewhite;
+  z-index: 1000;
+}
+
+.logo__des__artistes {
+  width: 180px;
+  height: 180px;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(71, 7, 7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  margin-bottom: 0.75rem;
+  z-index: 1000;
+}
+
+.nav__item {
+  color: antiquewhite;
+  text-decoration: none;
+  width: 15%;
+  font-size: 1.3rem;
+  height: 70px;
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+.nav__item:hover {
+  color: rgb(207, 82, 9);
+  background-color: rgba(126, 36, 36, 0.534);
+  border-left: 1px solid #cd620b;
+  border-right: 1px solid #cd620b;
+  z-index: 1000;
+}
+.page1 {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(202, 186, 168);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1000;
+}
+
+.baniere {
+  width: 80%;
+  height: 240px;
+  display: flex;
+  align-self: flex-start;
+  background-color: rgb(121, 173, 168);
+  margin-right: auto;
+  z-index: 1000;
+}
+
+.paragraph1 {
+  padding: 1rem;
+}
+
+.baniere__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.img__baniere {
+  height: auto;
+  padding: 1rem;
+  width: 90%;
+  cursor: pointer;
+}
+.title__h2 {
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+.paragraph1 {
+  color: antiquewhite;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.aside__menu {
+  width: 30%;
+  height: auto;
+  background-color: rgb(121, 173, 168);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: center;
+  order: -1;
+}
+
+.aside__item {
+  color: antiquewhite;
+  width: 60%;
+  font-size: 1.5rem;
+  padding: 1.3rem 0.25rem 1.2rem 0;
+  border-bottom: 4px solid antiquewhite;
+  text-align: start;
+  cursor: pointer;
+}
+
+.aside__item:hover {
+  transition: all 1s;
+  transform: scale(1.1);
+}
+
+.gallery {
+  /* justify-content: center;
+  align-items: center; */
+  width: 60%;
+  height: auto;
+  margin: 2rem;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: -1000;
+}
+
+.title__h3 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  width: 400px;
+  font-weight: bold;
+  color: rgb(80, 106, 104);
+}
+
+.gallery__paint {
+  /* width: 100%; */
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  justify-items: center;
+  z-index: -1000;
+}
+
+.figure {
+  display: flex;
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+}
+
+.picture {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.figcaption {
+  width: 100%;
+  height: 35px;
+  font-size: 0.75rem;
+  /* padding: 0.25rem; */
+  text-align: center;
+  align-content: center;
+  background-color: black;
+  color: antiquewhite;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* padding: 2rem 10rem; */
+  color: antiquewhite;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.fa-copyright {
+  padding: 1rem 0.5rem;
+}
+
+.copyright {
+  padding: 1rem;
+}
+
+/* animation */
+
+.title__animate {
+  position: relative; /* Nécessaire pour manipuler top/left */
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; /* Maintient la position finale */
+}
+
+.toggleNav {
+  height: 240px !important;
+}
+
+@keyframes bounce {
+  0% {
+    top: -1000px;
+    left: 50px; /* Assurez-vous de définir une position initiale */
+  }
+  25% {
+    top: -10px; /* Descente initiale */
+    left: 0;
+  }
+  75% {
+    top: -50px; /* Descente intermédiaire */
+    left: -50px;
+  }
+  100% {
+    top: 0; /* Position finale */
+    left: 0; /* Optionnel, si vous voulez déplacer horizontalement */
+  }
+}
+
+.gallery__animate {
+  position: relative; /* Nécessaire pour manipuler top/left */
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; /* Maintient la position finale */
+}
+
+@keyframes bounce {
+  0% {
+    top: -1000px;
+    left: 0; /* Assurez-vous de définir une position initiale */
+  }
+  25% {
+    top: 65px; /* Descente initiale */
+    left: 0;
+  }
+  75% {
+    top: -100px; /* Descente intermédiaire */
+    left: 0;
+  }
+  100% {
+    top: 0; /* Position finale */
+    left: 0; /* Optionnel, si vous voulez déplacer horizontalement */
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1268px) {
+  .logo__des__artistes {
+    height: 150px;
+    width: 150px;
+  }
+  .title__h1 {
+    font-size: 3.5rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 2rem;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+  }
+  .aside__item {
+    font-size: 1rem;
+  }
+  .aside__menu {
+    width: 200px;
+  }
+  .baniere {
+    height: 180px;
+  }
+  .figure {
+    width: 160px;
+  }
+  .gallery {
+    bottom: 90px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo__des__artistes {
+    height: 115px;
+    width: 115px;
+  }
+  .img__baniere {
+    width: 100px;
+  }
+  .header {
+    height: 150px;
+  }
+  .page1 {
+    height: 1000px;
+  }
+  .nav__item {
+    font-size: 0.8rem;
+  }
+  .title__h1 {
+    font-size: 3rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 1rem;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .aside__item {
+    font-size: 0.75rem;
+  }
+  .aside__menu {
+    width: 200px;
+  }
+  .baniere {
+    height: 160px;
+  }
+  .figure {
+    width: 140px;
+  }
+  .gallery {
+    bottom: 170px;
+    right: -100px;
+    width: 500px;
+  }
+  .figcaption {
+    font-size: 0.5rem;
+  }
+  .gallery__paint {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .logo__des__artistes {
+    height: 115px;
+    width: 115px;
+  }
+  .img__baniere {
+    width: 100px;
+  }
+  .header {
+    height: 150px;
+  }
+  .page1 {
+    height: 1000px;
+  }
+  .nav__item {
+    font-size: 0.8rem;
+  }
+  .title__h1 {
+    font-size: 3rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 1rem;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .aside__item {
+    font-size: 0.75rem;
+  }
+  .aside__menu {
+    width: 200px;
+  }
+  .baniere {
+    height: 160px;
+  }
+  .figure {
+    width: 140px;
+  }
+  .gallery {
+    bottom: 170px;
+    right: -150px;
+    width: 500px;
+  }
+  .figcaption {
+    font-size: 0.5rem;
+  }
+  .gallery__paint {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .logo__des__artistes {
+    height: 115px;
+    width: 115px;
+  }
+  .img__baniere {
+    width: 100px;
+  }
+  .header {
+    height: 150px;
+  }
+  .page1 {
+    height: auto;
+  }
+  .nav__item {
+    font-size: 0.8rem;
+  }
+  .title__h1 {
+    font-size: 3rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 1rem;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .aside__item {
+    font-size: 0.75rem;
+  }
+  .aside__menu {
+    width: 200px;
+  }
+  .baniere {
+    height: 160px;
+  }
+  .figure {
+    width: 140px;
+  }
+  .gallery {
+    bottom: 170px;
+    right: -120px;
+    width: 400px;
+  }
+  .figcaption {
+    font-size: 0.5rem;
+  }
+  .gallery__paint {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo__des__artistes {
+    height: 80px;
+    width: 80px;
+  }
+  .img__baniere {
+    width: 100px;
+  }
+  .header {
+    height: 150px;
+  }
+  .page1 {
+    height: 1000px;
+  }
+  .nav__item {
+    font-size: 0.8rem;
+  }
+  .title__h1 {
+    font-size: 2rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 0.75rem;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .aside__item {
+    font-size: 0.5rem;
+    border-bottom: solid 1px antiquewhite;
+  }
+  .aside__menu {
+    width: 150px;
+  }
+  .baniere {
+    height: 160px;
+  }
+  .figure {
+    width: 115px;
+  }
+  .gallery {
+    bottom: 170px;
+    right: -240px;
+    width: 500px;
+  }
+  .figcaption {
+    font-size: 0.5rem;
+    height: 20px;
+  }
+  .gallery__paint {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo__des__artistes {
+    height: 80px;
+    width: 80px;
+  }
+  .img__baniere {
+    width: 80px;
+  }
+  .header {
+    height: 120px;
+    justify-content: center;
+  }
+  .page1 {
+    height: 1000px;
+  }
+  .nav__item {
+    font-size: 0.5rem;
+  }
+  .title__h1 {
+    font-size: 2rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 0.75rem;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+  }
+  .aside__item {
+    font-size: 0.5rem;
+    border-bottom: solid 1px antiquewhite;
+  }
+  .aside__menu {
+    width: 100px;
+  }
+  .baniere {
+    height: 120px;
+  }
+  .figure {
+    width: 115px;
+  }
+  .gallery {
+    bottom: 170px;
+    right: -80px;
+    width: 300px;
+  }
+  .figcaption {
+    font-size: 0.5rem;
+    height: 20px;
+  }
+  .gallery__paint {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .logo__des__artistes {
+    height: 80px;
+    width: 80px;
+  }
+  .img__baniere {
+    width: 70px;
+  }
+  .header {
+    height: 120px;
+    justify-content: center;
+  }
+  .page1 {
+    height: 1400px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 150px;
+  }
+  .nav__item {
+    font-size: 0.5rem;
+    text-align: start;
+    padding-left: 2rem;
+    height: 40px;
+    width: 95%;
+  }
+  .nav__item {
+    font-size: 1rem;
+    height: 40px;
+    width: 80%;
+    align-self: center;
+  }
+  .title__h1 {
+    font-size: 2rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 0.5rem;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+    font-size: 0.25rem;
+  }
+  .aside__item {
+    font-size: 0.3rem;
+    border-bottom: solid 1px antiquewhite;
+  }
+  .aside__menu {
+    width: 80px;
+  }
+  .baniere {
+    height: 80px;
+  }
+  .figure {
+    width: 115px;
+  }
+  .gallery {
+    bottom: 90px;
+    right: -100px;
+    width: 200px;
+  }
+  .figcaption {
+    font-size: 0.5rem;
+    height: 20px;
+  }
+  .gallery__paint {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .logo__des__artistes {
+    height: 70px;
+    width: 70px;
+  }
+  .img__baniere {
+    display: none;
+  }
+  .header {
+    width: 95%;
+    height: 120px;
+    justify-content: center;
+  }
+  .page1 {
+    height: 1700px;
+  }
+  .nav {
+    flex-direction: column;
+    height: auto;
+  }
+  .nav__item {
+    font-size: 1rem;
+    height: 40px;
+    width: 80%;
+    align-self: center;
+  }
+  .title__h1 {
+    font-size: 1.5rem;
+  }
+  .title__h2,
+  .title__h3 {
+    font-size: 1rem;
+  }
+  .title__h3 {
+    width: 300px;
+    text-align: center;
+  }
+  .title__h2 {
+    padding: 0.5rem;
+  }
+  .paragraph1 {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .aside__item {
+    font-size: 0.3rem;
+    border-bottom: solid 1px antiquewhite;
+  }
+  .aside__menu {
+    width: 80px;
+    display: none;
+  }
+  .baniere {
+    height: 170px;
+    width: 100%;
+    position: absolute;
+    padding: 0.25rem 0;
+  }
+  .figure {
+    width: 250px;
+    height: 200px;
+  }
+  /* .title__h3{
+    justify-self: center
+  } */
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200;
+    left: 0;
+    width: 100%;
+    margin: 2rem 0;
+    position: absolute;
+  }
+  .figcaption {
+    font-size: 0.5rem;
+    height: 20px;
+  }
+  .gallery__paint {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    font-size: 0.5rem;
+  }
+
+  .icone__burger {
+    display: block;
+  }
+  .nav {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+}

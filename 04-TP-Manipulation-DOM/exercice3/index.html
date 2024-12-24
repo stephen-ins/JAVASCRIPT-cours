@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice-3</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item__calc">
+        <label for="calcul">Saisissez un nombre</label>
+        <input
+          type="text"
+          id="calcul"
+          class="input__text"
+          oninput="calcul(this)"
+        />
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Carré</th>
+            <th>Cube</th>
+          </tr>
+        </thead>
+        <body>
+          <tr>
+            <td id="nombre"></td>
+            <td id="carre"></td>
+            <td id="cube"></td>
+          </tr>
+        </body>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

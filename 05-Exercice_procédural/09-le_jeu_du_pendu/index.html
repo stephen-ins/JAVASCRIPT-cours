@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jouez au jeu du pendu en ligne
+    gratuitement ! Testez votre vocabulaire et amusez-vous à deviner les mots
+    avant que le bonhomme ne soit pendu. Idéal pour tous les âges, seul ou entre
+    amis."
+    />
+    <meta
+      name="keywords"
+      content="jeu du pendu, Hangman, jeu en ligne, deviner des mots, vocabulaire, jeu éducatif, jeu pour enfants et grands, jeux de lettres, jeux gratuits, jeu de société en ligne, jeu amusant, jeux de réflexion"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice procédural | Question 9 : Le jeux du pendu</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Le jeu du pendu</h1>
+      <img src="assets/images/logo/le_pendu.jpg" alt="image le pendu" />
+      <div class="content">
+        <h2 class="title__h2">Le mot à deviner :</h2>
+        <div class="cache__word" id="cacheWord"></div>
+        <button class="button__submit" id="gameButton">REJOUER</button>
+        <div id="alphabetLetter" class="alphabet__letter"></div>
+        <div class="attempts" id="nbAttempts">Vous avez 9 tentatives !</div>
+        <div class="result__message" id="resultMessage">Votre résultat</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

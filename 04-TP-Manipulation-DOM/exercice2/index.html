@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exercice-2</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="field1" class="form">
+        <div class="form__item">
+          <label for="">Votre texte ici</label>
+          <input
+            type="text"
+            id="field1"
+            class="input__text"
+            oninput="copyValue(this)"
+          />
+        </div>
+        <div class="form__item">
+          <label for="field2">La copie ici</label>
+          <input type="text" id="field2" class="input__text" />
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

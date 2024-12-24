@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="calculatrice.css" />
+    <title>04-TP-calculatrice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block__title">
+        <h1 class="title__h1">Calculatrice</h1>
+        <i class="fa-solid fa-calculator icone_calc"></i>
+      </div>
+      <div class="display__calc">
+        <a href="#" class="show" onclick="showCalculatrice();">Afficher</a>
+        <a href="#" class="hide" onclick="hideCalculatrice();">Masquer</a>
+        <!-- <a href="#" class="show" onclick="">Afficher</a>
+        <a href="#" class="hide" onclick="">Masquer</a> -->
+      </div>
+      <div class="block__calculatrice">
+        <form action="" class="form__calcul">
+          <div class="resultat"></div>
+          <input
+            type="text"
+            id="number1"
+            class="input__text"
+            data-type="number1"
+          />
+          <div class="info__bulle__number1">Saisir un chiffre</div>
+          <select
+            name=""
+            id="operator"
+            class="input__text"
+            data-type="operator"
+          >
+            <option value="addition">+</option>
+            <option value="soustraction">-</option>
+            <option value="division">/</option>
+            <option value="multiplication">*</option>
+          </select>
+          <div class="info__bulle__operators">Sélectionner un opérateur</div>
+          <input
+            type="text"
+            id="number2"
+            class="input__text"
+            data-type="number2"
+          />
+          <div class="info__bulle__number2">Saisir un chiffre</div>
+          <button type="submit" class="button__submit">CALCULER</button>
+        </form>
+      </div>
+    </div>
+    <script src="calculatrice.js"></script>
+  </body>
+</html>

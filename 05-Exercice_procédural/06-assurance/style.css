@@ -1,0 +1,187 @@
+@import url(../reset.css);
+
+html,
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: xx-large;
+  font: bold;
+  padding: 1rem;
+}
+label {
+  width: 80%;
+}
+
+.container {
+  width: 80%;
+  height: 1200px;
+  background-color: rgb(173, 162, 151);
+  border-radius: 0.5rem;
+  margin: 40px auto;
+  font-size: 1.5rem;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  margin: 20px;
+  padding: 40px;
+  width: 70%;
+  height: 100%;
+  background-color: #00000040;
+  border: #000 1px solid;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title__assurance {
+  font-size: 1.5 rem;
+  padding: 0.5rem;
+}
+
+input {
+  margin: 2rem;
+  width: 80%;
+  height: 40px;
+  font-size: 1.5 rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+button {
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding: 0.3rem;
+  width: 150px;
+  color: #fff;
+  background-color: rgba(7, 7, 224, 0.716);
+  border-radius: 0.5rem;
+}
+
+.message {
+  width: 700px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarifRed {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 200px;
+  height: 70px;
+  background-color: red;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tarifGreen {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  background-color: #288008;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tarifOrange {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  background-color: #dc6007;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tarifBlue {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  background-color: #0016d8;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+}
+
+.tarifRefuse {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  border: #9f0404 4px solid;
+  width: 300px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  input {
+    width: 250px;
+    font-size: 1.2rem;
+  }
+  .container {
+    font-size: 1.2rem;
+  }
+
+  .message {
+    font-size: 1rem;
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  input {
+    width: 160px;
+    font-size: 0.75rem;
+  }
+  .container {
+    font-size: 0.75rem;
+    height: 100%;
+  }
+  .content {
+    width: 160px;
+    height: auto;
+    margin: 0 0.5rem;
+  }
+
+  .message {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}

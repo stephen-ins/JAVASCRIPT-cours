@@ -1,0 +1,257 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: "nasalizationregular";
+  src: url(../assets/fonts/nasalization_rg-webfont.woff2) format("woff2"),
+    url(../assets/fonts/nasalization_rg-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-size: 16px;
+  background: green;
+  background-size: cover;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.user__select {
+  user-select: none;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+  min-height: 100vh;
+}
+
+.block__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+  /* position: relative; */
+}
+
+.title__h1 {
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1rem;
+  font-family: "nasalizationregular";
+  color: #df3636;
+}
+
+.cellule {
+  width: 30px;
+  height: 30px;
+  padding: 0.5rem;
+}
+
+.cellule__indices {
+  padding: 0 0.5rem;
+}
+
+.circle {
+  width: calc(100% - 0.25rem);
+  height: calc(100% - 0.25rem);
+  border: 2px solid grey;
+  border-radius: 50%;
+}
+
+.circle__indice {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-bottom: 0.5rem;
+}
+
+.descover {
+  border: none;
+  padding: 0.5rem;
+  background-color: rgb(65, 200, 121);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 0.5rem;
+  display: inline;
+  font-weight: bold;
+}
+
+.cellule__descover {
+  vertical-align: middle;
+}
+
+.table__mastermind {
+  margin: 2rem;
+}
+
+.block__content {
+  width: 410px;
+  display: flex;
+  background-color: blanchedalmond;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.84);
+  z-index: 1000;
+}
+
+.choices {
+  height: 220px;
+  align-self: flex-end;
+  padding: 0 2rem 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.circle__choices {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: 0px 0px 4px 0px #000000;
+}
+
+.dragging {
+  box-shadow: none !important;
+  border-radius: 50% !important;
+}
+
+.green {
+  background-color: rgb(68, 195, 68);
+}
+
+.blue {
+  background-color: rgb(68, 172, 195);
+}
+
+.red {
+  background-color: rgb(195, 68, 68) !important;
+}
+
+.purple {
+  background-color: rgb(156, 27, 156);
+}
+
+.black {
+  background-color: #000;
+}
+
+.yellow {
+  background-color: rgb(239, 239, 78);
+}
+
+.orange {
+  background-color: orange;
+}
+
+.modal {
+  background-color: #d2d2d2;
+  width: 600px;
+  height: 200px;
+  box-shadow: 1px 1px 9px -1px #000000;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: calc(50% - (600px / 2));
+  top: -400px;
+  transition: all 0.25s ease-out;
+  z-index: 1000;
+}
+
+.modal__title {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.play {
+  background-color: rgb(68, 195, 68);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modalIn {
+  animation: 1s linear forwards modalIn;
+}
+
+.content__modal {
+  pointer-events: none;
+  user-select: none;
+  filter: blur(3px);
+  background-color: rgb(165, 165, 165, 0.8);
+}
+
+.block__tentative {
+  width: 200px;
+  margin-bottom: 1rem;
+  background: blanchedalmond;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.84);
+}
+
+.button__new__game {
+  background-color: rgb(65, 200, 121);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  /* letter-spacing: 0.25rem; */
+}
+
+.button__new__game:hover,
+.descover:hover {
+  background-color: rgb(25, 169, 25);
+}
+
+.numberTentatives {
+  background-color: rgb(65, 200, 121);
+  color: #fff;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(600px);
+  }
+}

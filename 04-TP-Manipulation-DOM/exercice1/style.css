@@ -1,0 +1,52 @@
+@import url(../../01-Entrainement/css/reset.css);
+
+html,
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.large__picture {
+  width: 700px;
+  height: 700px;
+  border: 5px, solid #000;
+  position: relative;
+  padding: 40px 0;
+}
+
+.legend__picture {
+  background-color: rgba(27, 27, 27, 0.884);
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.bloc__thumbnails {
+  width: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+.thumbnail:hover {
+  opacity: 0.5;
+}
+.thumbnail__opacity {
+  opacity: 0.3;
+}

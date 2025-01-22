@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>10-Mastermind</title>
+  </head>
+  <body>
+    <div class="modal">
+      <h1 class="modal__title"></h1>
+      <button class="play" onclick="window.location.reload();">REJOUER</button>
+    </div>
+    <div class="container">
+      <div class="block__content">
+        <table class="table__mastermind">
+          <thead>
+            <tr>
+              <td colspan="4" class="cellule__descover">
+                <button class="descover" onclick="descoverResult();">
+                  Découvrir
+                </button>
+              </td>
+              <td class="cellule">
+                <div class="circle circle__solution hide"></div>
+              </td>
+              <td class="cellule">
+                <div class="circle circle__solution hide"></div>
+              </td>
+              <td class="cellule">
+                <div class="circle circle__solution hide"></div>
+              </td>
+              <td class="cellule">
+                <div class="circle circle__solution hide"></div>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="12"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="12"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="12"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="12"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="12" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="12" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="12" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="12" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="11"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="11"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="11"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="11"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="11" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="11" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="11" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="11" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="10"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="10"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="10"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="10"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="10" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="10" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="10" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="10" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="9"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="9"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="9"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="9"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="9" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="9" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="9" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="9" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="8"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="8"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="8"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="8"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="8" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="8" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="8" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="8" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="7"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="7"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="7"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="7"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="7" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="7" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="7" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="7" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="6"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="6"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="6"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="6"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="6" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="6" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="6" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="6" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="5"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="5"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="5"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="5"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="5" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="5" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="5" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="5" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="4"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="4"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="4"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="4"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="4" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="4" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="4" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="4" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="3"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="3"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="3"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="3"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="3" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="3" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="3" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="3" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="2"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="2"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="2"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="2"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="2" data-position="0" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="2" data-position="1" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="2" data-position="2" class="circle"></div>
+              </td>
+              <td class="cellule">
+                <div data-step="2" data-position="3" class="circle"></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="1"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="1"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="1"></div>
+              </td>
+              <td class="cellule__indices">
+                <div class="circle__indice" data-indice="1"></div>
+              </td>
+              <td class="cellule">
+                <div
+                  data-position="0"
+                  data-step="1"
+                  class="circle"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+              </td>
+              <td class="cellule">
+                <div
+                  data-position="1"
+                  data-step="1"
+                  class="circle"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+              </td>
+              <td class="cellule">
+                <div
+                  data-position="2"
+                  data-step="1"
+                  class="circle"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+              </td>
+              <td class="cellule">
+                <div
+                  data-position="3"
+                  data-step="1"
+                  class="circle"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                ></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="choices">
+          <div
+            class="circle__choices green"
+            id="green"
+            draggable="true"
+            ondragstart="dragstart(event)"
+            data-color="green"
+          ></div>
+          <div
+            class="circle__choices blue"
+            id="blue"
+            draggable="true"
+            ondragstart="dragstart(event)"
+            data-color="blue"
+          ></div>
+          <div
+            class="circle__choices red"
+            id="red"
+            draggable="true"
+            ondragstart="dragstart(event)"
+            data-color="red"
+          ></div>
+          <div
+            class="circle__choices purple"
+            id="purple"
+            draggable="true"
+            ondragstart="dragstart(event)"
+            data-color="purple"
+          ></div>
+          <div
+            class="circle__choices black"
+            id="black"
+            draggable="true"
+            ondragstart="dragstart(event)"
+            data-color="black"
+          ></div>
+          <div
+            class="circle__choices yellow"
+            id="yellow"
+            draggable="true"
+            ondragstart="dragstart(event)"
+            data-color="yellow"
+          ></div>
+        </div>
+      </div>
+      <div class="block__title">
+        <h1 class="title__h1">MASTERMIND</h1>
+        <div class="block__tentative">
+          <p>Tentative restante : <span class="numberTentatives">12</span></p>
+          <a
+            href="#"
+            onclick="window.location.reload();"
+            class="button__new__game"
+            >Nouvelle partie</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

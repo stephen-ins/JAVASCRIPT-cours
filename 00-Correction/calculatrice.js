@@ -2,6 +2,8 @@ const formCalcul = document.querySelector(".form__calcul");
 formCalcul.addEventListener("submit", (event) => {
   event.preventDefault(); // annule le comportement de l'event Submit
 
+
+
   // Lorsqu'on selectionne des valeurs de champs de formulaires, leur type est string, ici nous executons la fonction prédéfinie parseFloat qui permet de convertir une chaine de caractère en chiffre flottant (chiffre avec décimal)
   const number1 = parseFloat(document.querySelector("#number1").value);
   const operator = document.querySelector("#operator").value;
